@@ -14,12 +14,12 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/black/pace-theme-loading-bar.css">
-  <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"chen-xin98.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"chen-xin98.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Markdown是什么的下面引用百度百科的说明： &gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。Markdown语法行内代码&#96;代码&#96;这样的形式来展示行内代码。(~ 键)例如：main()是入口 多行代码&#96;&#96;&#96;代码&#96;&#96;&#96;的形式展示多行代码例如：12#!&#x2F;usr&#x2F;bin&#x2F;env python3print(&quot;Hell">
@@ -31,9 +31,8 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://chen-xin98.github.io/path/to/img.jpg">
 <meta property="og:image" content="http://i1.fuimg.com/730147/351f69502c756960.jpg">
-<meta property="og:image" content="https://www.google.com/doodles/kamma-rahbeks-241st-birthday">
 <meta property="article:published_time" content="2020-11-24T11:47:40.436Z">
-<meta property="article:modified_time" content="2020-11-26T00:35:40.803Z">
+<meta property="article:modified_time" content="2020-11-27T07:42:14.095Z">
 <meta property="article:author" content="Chen Xin">
 <meta property="article:tag" content="语法规则">
 <meta property="article:tag" content="markdown">
@@ -112,6 +111,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -141,11 +141,43 @@
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>公益 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -155,6 +187,7 @@
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
+  <div class="reading-progress-bar"></div>
 
 
     <main class="main">
@@ -199,7 +232,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-26 08:35:40" itemprop="dateModified" datetime="2020-11-26T08:35:40+08:00">2020-11-26</time>
+                <time title="修改时间：2020-11-27 15:42:14" itemprop="dateModified" datetime="2020-11-27T15:42:14+08:00">2020-11-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -231,7 +264,8 @@
 </ul>
 <h2 id="1-列表项目"><a href="#1-列表项目" class="headerlink" title="1. 列表项目"></a>1. 列表项目</h2><p><strong>插入链接或文本</strong><br>Markdown 插入链接：<br><a href="http://chen-xin98.github.io" title="标题">链接文字</a></p>
 <p>Markdown 插入图片：<br><img src="/path/to/img.jpg" alt="alt text" title="Title"></p>
-<p><img src="http://i1.fuimg.com/730147/351f69502c756960.jpg" alt="头像" title="Title"><br><img src="https://www.google.com/doodles/kamma-rahbeks-241st-birthday" width="200px" /></p>
+<!-- ![头像](http://i1.fuimg.com/730147/351f69502c756960.jpg  "Title") -->
+<p><img src="http://i1.fuimg.com/730147/351f69502c756960.jpg" width="20px" /></p>
 <hr>
 <p><strong>表格</strong></p>
 <p>具体看代码 代码中:的位置表示对齐方式。<br></p>
@@ -459,6 +493,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 

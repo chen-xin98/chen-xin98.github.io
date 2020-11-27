@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Markdown快速入门</title>
+    <url>/2020/11/24/hello-world/</url>
+    <content><![CDATA[<h2 id="Markdown是什么的"><a href="#Markdown是什么的" class="headerlink" title="Markdown是什么的"></a>Markdown是什么的</h2><p>下面引用百度百科的说明：</p>
+<h2 id="gt-Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。"><a href="#gt-Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。" class="headerlink" title="&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。"></a>&gt;Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</h2><h2 id="Markdown语法"><a href="#Markdown语法" class="headerlink" title="Markdown语法"></a>Markdown语法</h2><h3 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a><strong>行内代码</strong></h3><p>`代码`这样的形式来展示行内代码。(~ 键)<br>例如：<code>main()</code>是入口</p>
+<h3 id="多行代码"><a href="#多行代码" class="headerlink" title="多行代码"></a><strong>多行代码</strong></h3><p>```代码```的形式展示多行代码<br>例如：<br><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line">print(<span class="string">&quot;Hello, World!&quot;</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><p><strong>换行</strong>：\<br\><br><br><strong>标题</strong><br>markdown提供1-6级标题，用#的数量来控制。<br><br><strong>加粗</strong><br>加粗使用*来表示，被**包含的部分将<strong>加粗</strong>。<br><br><strong>斜体</strong><br>也使用*表示，被*包含的部分是<em>斜体</em>。<br><br><strong>删除线</strong><br>使用表示~~删除线~~<br><del>删除线</del>。<br><br><strong>下划线</strong><br>使用\<u>\</u>表示<u>下划线</u>。<br><br><strong>Markdown 列表：</strong><br>使用-或1. 。</p>
+<ul>
+<li>列表项目</li>
+</ul>
+<h2 id="1-列表项目"><a href="#1-列表项目" class="headerlink" title="1. 列表项目"></a>1. 列表项目</h2><p><strong>插入链接或文本</strong><br>Markdown 插入链接：<br><a href="http://chen-xin98.github.io" title="标题">链接文字</a></p>
+<p>Markdown 插入图片：<br><img src="/path/to/img.jpg" alt="alt text" title="Title"></p>
+<!-- ![头像](http://i1.fuimg.com/730147/351f69502c756960.jpg  "Title") -->
+<p><img src="http://i1.fuimg.com/730147/351f69502c756960.jpg" width="20px" /></p>
+<hr>
+<p><strong>表格</strong></p>
+<p>具体看代码 代码中:的位置表示对齐方式。<br></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Left-Aligned</th>
+<th style="text-align:center">Center Aligned</th>
+<th style="text-align:right">Right Aligned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">col 3 is</td>
+<td style="text-align:center">some wordy text</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td style="text-align:left">col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td style="text-align:left">zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<hr>
+]]></content>
+      <categories>
+        <category>教程类</category>
+      </categories>
+      <tags>
+        <tag>语法规则</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+</search>
